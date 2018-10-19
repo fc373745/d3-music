@@ -1,32 +1,77 @@
-.App {
-  text-align: center;
+
+body{
+  background-color: #AEC3B0;
+}
+.progressbar{
+  margin: 0 auto;
+  cursor: pointer;
+  width: 800px;
+  background-color: #EFF6E0;
+  height: 20px;
+  border-radius: 4px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.progresstrack{
+  
+  background-color: #22333B;
+  height: 20px;
+  border-radius: 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.volumebar{
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 200px;
+  background-color: #EFF6E0;
+  height: 15px;
+  border-radius: 4px;
+}
+
+.volumebartrack{
+  height: 15px;
+  background-color: #22333B;
+  border-radius: 4px;
+}
+
+.media_controls{
+  margin: 0 auto;
+  width: 700px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  padding: .5rem 0;
 }
 
-.App-link {
-  color: #61dafb;
+.play_button{
+  font-size: 40px;
+  cursor: pointer;
+  color: #22333B;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.toggle{
+  font-size: 25px;
+  cursor: pointer;
+  color: #22333B;
+  width: 100px;
+}
+
+.music_listing{
+  margin: 0 auto;
+  width: 500px;
+}
+
+.song_listing{
+  width: 500px;
+  text-align: center;
+  font-size: 25px;
+  padding: .5rem .5rem;
+  margin: .5rem 0;
+  border: 2px solid #22333B;
+}
+
+.song_listing:hover{
+  background-color: #22333B;
+  color: #AEC3B0;
+  transition-duration: 250ms;
+  cursor: pointer;
 }
