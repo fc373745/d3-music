@@ -8,7 +8,41 @@ import WaveForm from "./components/WaveForm";
 
 library.add(faPlay, faPause);
 
-const musicList = ["every.mp3", "Night.mp3", "Starlight.mp3", "wowou.mp3"];
+const musiclist2 = [
+    {
+        artist: "Sam Smith",
+        name: "Baby, You make me Crazy",
+        song: "samsmith.mp3"
+    },
+    {
+        artist: "Mark Morrison",
+        name: "Return of the Mack",
+        song: "return.mp3"
+    },
+    {
+        artist: "Anna Kendrick",
+        name: "Cups (jellosea)",
+        song: "anna.mp3"
+    },
+    {
+        artist: "Fleetwood Mac",
+        name: "Dreams",
+        song: "dreams.mp3"
+    },
+    {
+        artist: "Filter",
+        name: "Take a Picture",
+        song: "takeapic.mp3"
+    }
+];
+
+const musicList = [
+    "samsmith.mp3",
+    "return.mp3",
+    "anna.mp3",
+    "dreams.mp3",
+    "takeapic.mp3"
+];
 
 class App extends Component {
     audioRef = React.createRef();
@@ -23,7 +57,7 @@ class App extends Component {
         WaveForm: null,
         x: 0,
         volumeX: 0,
-        song: musicList[0],
+        song: musiclist2[0].song,
         isPlaying: false,
         audioSet: false
     };
@@ -96,6 +130,9 @@ class App extends Component {
             this.initializeVolume();
             this.setState({ audioSet: true });
         }
+        if (!this.state.song) {
+            this.setSong(musiclist2[0].song);
+        }
         this.setState({ isPlaying: true });
         this.audioRef.current.play();
     };
@@ -162,13 +199,17 @@ class App extends Component {
                         <div className="volumebartrack" style={volumeWidth} />
                     </div>
                     <div className="music_listing">
-                        {musicList.map(song => (
+                        {musiclist2.map(song => (
                             <div
-                                className="song_listing"
-                                key={song}
-                                onClick={() => this.setSong(song)}
+                                className={
+                                    this.state.song === song.song
+                                        ? "song_listing_selected"
+                                        : "song_listing"
+                                }
+                                key={song.song}
+                                onClick={() => this.setSong(song.song)}
                             >
-                                {song}
+                                {song.artist} - {song.name}
                             </div>
                         ))}
                     </div>

@@ -1,77 +1,102 @@
-
-body{
-  background-color: #AEC3B0;
+body {
+    background-color: #aec3b0;
 }
-.progressbar{
-  margin: 0 auto;
-  cursor: pointer;
-  width: 800px;
-  background-color: #EFF6E0;
-  height: 20px;
-  border-radius: 4px;
-}
-
-.progresstrack{
-  
-  background-color: #22333B;
-  height: 20px;
-  border-radius: 4px;
+.progressbar {
+    margin: 0 auto;
+    cursor: pointer;
+    width: 800px;
+    background-color: #eff6e0;
+    height: 20px;
+    border-radius: 4px;
 }
 
-.volumebar{
-  margin: 0 auto;
-  cursor: pointer;
-  margin-top: 10px;
-  width: 200px;
-  background-color: #EFF6E0;
-  height: 15px;
-  border-radius: 4px;
+.progresstrack {
+    background-color: #22333b;
+    height: 20px;
+    border-radius: 4px;
 }
 
-.volumebartrack{
-  height: 15px;
-  background-color: #22333B;
-  border-radius: 4px;
+.volumebar {
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 200px;
+    background-color: #eff6e0;
+    height: 15px;
+    border-radius: 4px;
 }
 
-.media_controls{
-  margin: 0 auto;
-  width: 700px;
-  display: flex;
-  justify-content: space-around;
-  padding: .5rem 0;
+.volumebartrack {
+    height: 15px;
+    background-color: #22333b;
+    border-radius: 4px;
 }
 
-.play_button{
-  font-size: 40px;
-  cursor: pointer;
-  color: #22333B;
+.media_controls {
+    margin: 0 auto;
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 0;
 }
 
-.toggle{
-  font-size: 25px;
-  cursor: pointer;
-  color: #22333B;
-  width: 100px;
+.play_button {
+    font-size: 40px;
+    cursor: pointer;
+    color: #22333b;
 }
 
-.music_listing{
-  margin: 0 auto;
-  width: 500px;
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
-.song_listing{
-  width: 500px;
-  text-align: center;
-  font-size: 25px;
-  padding: .5rem .5rem;
-  margin: .5rem 0;
-  border: 2px solid #22333B;
+.play_button:hover {
+    animation: pulsate 750ms infinite;
 }
 
-.song_listing:hover{
-  background-color: #22333B;
-  color: #AEC3B0;
-  transition-duration: 250ms;
-  cursor: pointer;
+.toggle {
+    font-size: 25px;
+    cursor: pointer;
+    color: #22333b;
+    width: 100px;
+}
+
+.music_listing {
+    margin: 0 auto;
+    width: 500px;
+}
+
+.song_listing {
+    width: 500px;
+    text-align: center;
+    font-size: 25px;
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem 0;
+    border: 2px solid #22333b;
+}
+
+.song_listing:hover {
+    background-color: #22333b;
+    color: #aec3b0;
+    transition-duration: 250ms;
+    cursor: pointer;
+}
+
+.song_listing_selected {
+    width: 500px;
+    text-align: center;
+    font-size: 25px;
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem 0;
+    border: 2px solid #22333b;
+    background-color: #22333b;
+    color: #aec3b0;
 }
